@@ -44,3 +44,38 @@ function update() {
   document.getElementById("level").innerText = level;
 }
 
+// Balans va multi-touch (oldingi script.js kodini shu yerga qo‘shish mumkin)
+let balance = localStorage.getItem("balance") ? parseInt(localStorage.getItem("balance")) : 0;
+let level = localStorage.getItem("level") ? parseInt(localStorage.getItem("level")) : 1;
+
+update(); // sahifa ochilganda yangilash
+
+// Coin element (asosiy sahifaga joylashtirilsa)
+const coin = document.querySelector(".coin-css"); // agar mavjud bo‘lsa
+
+// Bottom Navigation
+const navItems = document.querySelectorAll(".nav-item");
+const content = document.getElementById("content");
+
+navItems.forEach(item => {
+  item.addEventListener("click", function() {
+    navItems.forEach(i => i.classList.remove("active"));
+    this.classList.add("active");
+
+    const section = this.dataset.section;
+
+    if(section === "asosiy"){
+      content.innerHTML = `
+        <h1>NotCoin O‘yini 🪙</h1>
+        <p>Tangani bosing va o‘yin boshlanadi!</p>
+      `;
+    } else {
+      content.innerHTML = `
+        <h1>Coming Soon 🚧</h1>
+        <p>Bu bo‘lim hali tayyor emas!</p>
+      `;
+    }
+  });
+});
+
+// LocalStorage saqlash va balans +1 animatsiyasi kodini oldingi script.js dan qo‘shish mumkin
