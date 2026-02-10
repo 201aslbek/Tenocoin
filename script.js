@@ -43,3 +43,20 @@ function update() {
     balance.toLocaleString();
   document.getElementById("level").innerText = level;
 }
+// Bottom Navigation Bar
+const navItems = document.querySelectorAll(".nav-item");
+let currentSection = "xizmatlar"; // boshlang'ich bo‘lim
+
+navItems.forEach(item => {
+  item.addEventListener("click", function() {
+    // Hozirgi bo‘limni yangilash
+    navItems.forEach(i => i.classList.remove("active"));
+    this.classList.add("active");
+
+    currentSection = this.dataset.section;
+    console.log("Hozirgi bo‘lim:", currentSection);
+
+    // Shu yerga bo‘limni ochish / sahifa o‘zgartirish kodini yozish mumkin
+    // misol: showSection(currentSection);
+  });
+});
