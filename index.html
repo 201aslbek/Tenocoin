@@ -1,89 +1,83 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StarCoin</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TenoCoin</title>
+
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="app">
-  <div class="header">
-    <div class="user">
-      <img src="https://i.imgur.com/8Km9tLL.png" alt="avatar">
-      <span>Xush kelibsiz, Aslbek Uz</span>
+<!-- ================= HOME ================= -->
+<div class="page active" id="home">
+
+  <div class="top-card">
+    <div class="user-info">
+      <img id="avatar" class="avatar">
+      <div>
+        <div id="username">User</div>
+        <div>ID: <span id="userId"></span></div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div>Balance: <span id="balance">0</span></div>
+      <div>Level: <span id="level">1</span></div>
+
     </div>
   </div>
 
-  <div class="cards">
-    <div class="card">
-      <p>Joriy balans</p>
-      <h2 id="balance">0 <span>Soʻm</span></h2>
-      <button class="soon">Pul Chiqarish (Coming Soon)</button>
-
-    
-    </div>
+  <div class="coin-container">
+    <div class="coin" id="coin">$</div>
   </div>
+        <h1>      </h1>
+        <h1>       </h1>
+        <div>Clicks: <span id="clicks">1000</span></div>
 
-  <div class="coin-wrap">
-  <div class="coin-css" onclick="tapCoin()">$</div>
-  <div id="coin-container" class="coin-wrap">
-  
-</div>
-  <p>Sizning hisobingiz</p>
-  <h1 id="balanceBig">0</h1>
-  <span>so'm</span>
 </div>
 
+<!-- ================= SERVICES ================= -->
+<div class="page" id="services">
+  <h2>💰 Services</h2>
+  <p>Coming Soon...</p>
+</div>
 
-  </div>
+<!-- ================= FRIENDS ================= -->
+<div class="page" id="friends">
+  <h2>👥 Friends</h2>
+  <button id="shareBtn">Invite Friend</button>
+  <button id="copyBtn">Copy Bot Link</button>
+</div>
 
-  <div class="bottom">
-    <button class="active">Bosh Sahifa</button>
+<!-- ================= WORK ================= -->
+<div class="page" id="work">
+  <h2>⚡ Work</h2>
+  <button id="promoBtn">Enter Promo Code</button>
+
+  <div id="promoBox" class="promo-box">
+    <input type="text" id="promoInput" placeholder="Enter Code">
+    <button id="promoSubmit">Submit</button>
   </div>
+</div>
+
+<!-- ================= PROFILE ================= -->
+<div class="page" id="profile">
+  <img id="profileAvatar" class="avatar large">
+  <h3 id="profileName">User</h3>
+  <p>ID: <span id="profileId"></span></p>
+</div>
+
+<!-- ================= NAV ================= -->
+<div class="nav">
+  <div class="tab active" data-page="home">🪙 Home</div>
+  <div class="tab" data-page="services">🛠 Services</div>
+  <div class="tab" data-page="friends">👥️ Friends</div>
+  <div class="tab" data-page="work">️💰 Work</div>
+  <div class="tab" data-page="profile">👤 Profile</div>
 </div>
 
 <script src="script.js"></script>
-
-</div>
-
-<script src="./script.js"></script>
-  </button>
-</div> 
-  <body>
-  <!-- Asosiy kontent -->
-  <div id="content" class="content">
-    <h1>NotCoin O‘yini 🪙</h1>
-    <p>Tangani bosing va o‘yin boshlanadi!</p>
-  </div>
-
-  <!-- Bottom Navigation Bar (Liquid Glass) -->
-  <div class="bottom-nav">
-    <button class="nav-item active" data-section="xizmatlar">
-      <span class="icon">🛠</span>
-      <span class="label">Xizmatlar</span>
-    </button>
-    <button class="nav-item" data-section="dostlar">
-      <span class="icon">👥</span>
-      <span class="label">Do‘stlar</span>
-    </button>
-    <button class="nav-item" data-section="asosiy">
-      <span class="icon">🏠</span>
-      <span class="label">Asosiy</span>
-    </button>
-    <button class="nav-item" data-section="ishlash">
-      <span class="icon">💼</span>
-      <span class="label">Ishlash</span>
-    </button>
-    <button class="nav-item" data-section="profil">
-      <span class="icon">👤</span>
-      <span class="label">Profil</span>
-    </button>
-  </div>
-
-  <script src="./script.js"></script>
-  </body>
 </body>
 </html>
